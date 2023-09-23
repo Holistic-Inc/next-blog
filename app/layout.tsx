@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <div className="relative flex min-h-screen flex-col">{children}</div>
         <div>Is it home page: {home ? "it is" : "it's not"}</div>
+        <Analytics />
       </body>
     </html>
   );
