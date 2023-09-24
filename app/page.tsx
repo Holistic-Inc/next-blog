@@ -1,16 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import profilePic from "../assets/me.jpeg";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-2">
       <main className="flex flex-col items-center justify-center py-20">
+        <Image
+          className="rounded-full"
+          src={profilePic}
+          alt="Picture of the author"
+          width={200}
+          height={200}
+        />
         <h1 className="mb-4 text-center text-xl ">
           Read{" "}
-          <Link
-            className="no-underline hover:text-blue-700"
-            href="/posts/first-post"
-          >
+          <Link className="no-underline hover:text-blue-700" href="/posts">
             this page!
           </Link>
         </h1>

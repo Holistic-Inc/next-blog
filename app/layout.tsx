@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -9,17 +10,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  home,
 }: {
   children: React.ReactNode;
-  home?: boolean;
 }) {
-  console.log("### RootLayout: ", JSON.stringify(home));
   return (
     <html lang="en">
       <body>
-        <div className="relative flex min-h-screen flex-col">{children}</div>
-        <div>Is it home page: {home ? "it is" : "it's not"}</div>
+        <Header />
+        <main className="py-14">{children}</main>
         <Analytics />
       </body>
     </html>
