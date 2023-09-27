@@ -10,7 +10,7 @@ async function retuningPromiseWithSomeTimeout() {
   return new Promise((resolve, reject) => {
     setTimeout(async () => {
       resolve(await getPosts());
-    }, 2000);
+    }, 20000);
   });
 }
 
